@@ -1,0 +1,118 @@
+#banner{
+    background: #f8f8f8;
+    padding: 50px 0px;
+    .banner_item{
+        ul{
+           @include Flexible($wrap:wrap,$gap:10px);
+            li{
+                color: $primary_color;
+                a{
+                    @include Text($decoration:none,$color:#999);
+                    transition: 0.3s ease-in-out;
+                    &:hover{color: $primary_color;}
+                }
+                i{color: #999;}
+            }
+        }
+    }
+    .div2{
+        position: relative;
+        text-align: right;
+    }
+}
+#banner2{
+    padding: 50px 0px;
+    .banner2_items{
+        @media (max-width:768px) {
+           display: none; 
+        }
+        h6{
+            @include Text($size:22px,$wid:200px,$bottom:3px solid $primary_color);
+             padding: 10px 0px;
+        }
+        .div3{
+            ul{
+                li{
+                    list-style: circle;
+                    a{@include Text($decoration:none,$color:#999,$size:17px);}
+                }
+            }
+        }
+    }
+    .div4{
+        @media (max-width:$_wid_) {
+            display: none;
+        }
+        button{
+            @include Text($color:#fff,$ground:$primary_color,$radius:3px,$border:1px,$wid:220px,$heit:50px);
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .game{
+        position: relative;
+        &:hover{
+            .li{
+                transform: translateY(-10px);
+            opacity: 1;
+        }
+        }
+        .img{
+            overflow: hidden;
+            @include Text($wid:276px,$heit:276px);
+            img{
+                transform: scale(1);
+                transition: .3s ease-in-out;
+                @include Text($wid:$wid_100,$heit:$heit_100);
+                &:hover{transform: scale(1.1);}
+            }
+        }
+        .li{
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            opacity: 0;
+            transform: translateY(60px);
+            transition: 0.3s ease-in-out;
+            ul{
+                @include Flexible($gap:10px,$items:center);
+                li{
+                    i{
+                        @include Text($ground:#fff,$wid:30px,$heit:25px);
+                        @include Flexible($content:center,$items:center);
+                    }
+                    button{
+                        @include Text($color:#fff,$ground:#ff497c,$radius:3px,$border:1px,$wid:120px,$heit:40px);
+                        transform: scale(1);
+                        transition: 0.3s ease-in-out;
+                        &:hover{transform: scale(1.1);}
+                    }
+                }
+            }
+        }
+    }
+}
+.text{
+    a{
+        text-decoration: none;
+        color: #999;
+        &:hover{color: $primary_color;}
+    }
+    p{
+        font-weight: 500;
+        font-size: 22px;
+        del{color: #999;}
+    }
+}
+
+#banner3{
+
+    .modal-body{
+        button{
+            background-color: aqua;
+        }
+    }
+}

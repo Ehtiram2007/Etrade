@@ -1,0 +1,33 @@
+#nav{
+    padding: 50px 0px;
+    .ul1{
+        ul{
+            @include Flexible($content:center,$wrap:wrap,$gap:50px);
+            li{
+                a{
+                 @include Text($decoration:none,$color:#292930,$weight:700,$size:15px);
+                }
+                @media (max-width:$All_wid) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .div1{
+        ul{
+            @include Flexible($content:center,$wrap:wrap,$gap:20px,$items:center);
+            li{
+                input{
+                    @include Text($align:center,$radius:5px,$border:1px solid #f0f0f0,$wid:220px,$heit:40px);
+                    @media (max-width:$All_wid) {
+                        display: none;
+                    }
+                }
+                a{
+                    @include Text($color:#292930,$weight:300);
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}

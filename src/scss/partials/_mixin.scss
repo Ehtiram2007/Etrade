@@ -1,0 +1,20 @@
+@mixin Flexible($content:null,$wrap:null,$gap:null,$items:null) {
+    display: flex;
+    justify-content: $content;
+    flex-wrap: $wrap;
+    gap: $gap;
+    align-items: $items;
+}
+@mixin Text($decoration:null,$color:null,$weight:null,$size:null,$align:null,$ground:null,$radius:null,$border:null,$wid:null,$heit:null,$bottom:null) {
+    text-decoration: $decoration;
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+    text-align: $align;
+    background: $ground;
+    border-radius: $radius;
+    border: $border;
+    width: $wid;
+    height: $heit;
+    border-bottom: $bottom;
+}
